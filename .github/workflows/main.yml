@@ -1,7 +1,8 @@
 on:
   workflow_dispatch:
+
 jobs:
-  build_appimg:
+  build:
     name: Build App Image
     runs-on: ubuntu-18.0
   - name: Run Build
