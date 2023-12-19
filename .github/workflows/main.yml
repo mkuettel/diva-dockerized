@@ -5,7 +5,6 @@ on: [workflow_dispatch, push]
 
 jobs:
   build:
-    name: Build App Image
     runs-on: ubuntu-18.0
     steps:
         uses: actions/checkout@v4
