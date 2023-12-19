@@ -2,9 +2,13 @@ name: Build App Image
 
 on: [workflow_dispatch, push]
 
+
 jobs:
   build:
     name: Build App Image
     runs-on: ubuntu-18.0
-  - name: Run Build
-    run:  BASE_IP=172.19.73. HOST_BASE_IP=127.19.73. BASE_DOMAIN=testnet.local bin/build.sh
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Run Build
+      run:  BASE_IP=172.19.73. HOST_BASE_IP=127.19.73. BASE_DOMAIN=testnet.local bin/build.sh
